@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayan Ghosh | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 🔮 Parallax Background -->
+  <div id="parallax-bg"></div>
+
+  <!-- 🔥 Cursor Follower -->
+  <div id="cursor-dot"></div>
+
+  <!-- ✨ Firefly Canvas -->
+  <canvas id="firefly-canvas"></canvas>
+
+  <!-- 💫 Header -->
+  <header class="glass">
+    <div class="logo glow">Sherlok</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🧨 Hero Section -->
+  <section id="hero" class="section">
+    <h1 class="glow-text">Hey! I'm Ayan Ghosh, Welcome Here...</h1>
+    <p class="typewriter">Developer • DApp Builder • Dreamer</p>
+    <a href="#projects" class="btn neon">Explore My Projects</a>
+  </section>
+
+  <!-- 🧠 About -->
+  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I’m a Enthusiastic and results-driven B.Tech student with a strong foundation in fullstack
+        development, blockchain integration, and modern web technologies.Passionate about building scalable digital solutions that blend performance with
+        innovation. Looking to contribute to a forward-thinking tech team while continuously growing as a developer.
+    </p>
+  </section>
+
+  <!-- ⚙ Skills -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">React</div>
+      <div class="skill-card">Solidity</div>
+      <div class="skill-card">PHP</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Flask</div>
+      <div class="skill-card">MongoDB</div>
+    </div>
+  </section>
+
+  <!-- 🚀 Projects -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <h3>🍱 Waste Food Management</h3>
+        <p>Connects donors and NGOs to reduce food waste. Built with Flask + MongoDB.</p>
+      </div>
+      <div class="project-card">
+        <h3>💸 E-Commerce DApp</h3>
+        <p>Blockchain marketplace powered by Solidity, Truffle & React.</p>
+      </div>
+      <div class="project-card">
+        <h3>☁ Virtual Drive</h3>
+        <p>File storage app like Google Drive using React + MongoDB.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📬 Contact -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="hidden" name="_subject" value="New Message from Portfolio!" />
+      <input type="hidden" name="_captcha" value="false">
+      <textarea placeholder="Your message" required></textarea>
+      <button type="submit" class="btn neon">Send Message</button>
+    </form>
+    <form action="https://formsubmit.co/ghoshayan371@gmail.com" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn neon">Send Message</button>
+    </form>
+
+  </section>
+
+  <div class="social-links">
+    <p>Or follow me here:</p>
+    <a href="https://www.linkedin.com/in/ayan-ghosh-50ab97311/" target="_blank" class="linkedin-btn neon">
+      🔗 Follow me on LinkedIn
+    </a>
+  </div>
+
+  <!-- ⚡ Footer -->
+  <footer>
+    <p>©  Ayan Ghosh </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
