@@ -6,25 +6,25 @@ const skillCategories = [
     icon: Code2,
     title: "Frontend Development",
     description: "Building responsive and performant user interfaces with modern frameworks.",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     icon: Zap,
     title: "Backend Development",
     description: "Creating robust APIs and server-side applications with scalable architecture.",
-    skills: ["Node.js", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL"],
+    skills: ["Node.js", "PostgreSQL", "MongoDB"],
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description: "Crafting beautiful and intuitive user experiences with attention to detail.",
-    skills: ["Figma", "Adobe XD", "Prototyping", "Design Systems", "User Research"],
+    skills: ["Figma", "Prototyping", "Design Systems", "User Research"],
   },
   {
     icon: Rocket,
     title: "DevOps & Tools",
     description: "Deploying and maintaining applications with modern development workflows.",
-    skills: ["Git", "Docker", "Vercel", "AWS", "CI/CD"],
+    skills: ["Git", "Docker", "Vercel"],
   },
 ]
 

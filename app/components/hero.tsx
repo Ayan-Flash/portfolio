@@ -19,11 +19,13 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <video ref={videoRef} autoPlay loop muted playsInline preload="auto" className="w-full h-full object-cover opacity-50">
+        <video ref={videoRef} autoPlay loop muted playsInline preload="auto" className="w-full h-full object-cover opacity-70">
           <source src="/videos/hero-background.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay for better text readability */}
         <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+        {/* Horizontal smoke overlay (cinematic haze) */}
+        <div className="neon-smoke-horizontal z-10" />
       </div>
 
       <div className="relative z-20 container mx-auto">
@@ -57,8 +59,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Decorative gradient */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -z-10 animate-pulse" />
+        {/* Removed dial per request */}
       </div>
     </section>
   )

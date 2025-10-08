@@ -49,11 +49,11 @@ export function Contact() {
 
               <div className="space-y-4 mb-8">
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:ghoshayan371@gmail.com"
                   className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
                 >
                   <Mail className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                  hello@example.com
+                  ghoshayan371@gmail.com
                 </a>
               </div>
 
@@ -61,7 +61,7 @@ export function Contact() {
                 <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider">Follow Me</h4>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Ayan-Flash"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all"
@@ -69,7 +69,7 @@ export function Contact() {
                     <Github className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/ayan-ghosh-50ab97311/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all"
@@ -120,7 +120,7 @@ export function Contact() {
         </div>
 
         <div className="mt-32 pt-8 border-t border-white/10 text-center text-white/40 text-sm">
-          <p>© 2025 Portfolio. All rights reserved.</p>
+          <p>© Made By Ayan Ghosh. All rights reserved.</p>
         </div>
       </div>
     </section>
