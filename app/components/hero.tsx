@@ -1,8 +1,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronDown } from "lucide-react"
 import { useEffect, useRef } from "react"
+import { motion } from "framer-motion"
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -16,6 +17,14 @@ export function Hero() {
     }
   }, [])
 
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -26,41 +35,93 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/50 to-black" />
         {/* Horizontal smoke overlay (cinematic haze) */}
         <div className="neon-smoke-horizontal z-10" />
+        
+        {/* Neon accent beams */}
+        <motion.div
+          animate={{
+            opacity: [0.3, 0.6, 0.3],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px] z-10"
+        />
+        <motion.div
+          animate={{
+            opacity: [0.3, 0.6, 0.3],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-[120px] z-10"
+        />
       </div>
 
       <div className="relative z-20 container mx-auto">
-        <div className="max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 text-balance">
-            Creative Developer
+        <div className="max-w-4xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 text-balance"
+          >
+            <span className="bg-gradient-to-r from-cyan-400 via-white to-cyan-400 bg-clip-text text-transparent">
+              Just Me Being Creative
+            </span>
             <br />
             <span className="text-white/60">
               &nbsp;
-              <span aria-label="and Designer" className="typewriter inline-block align-baseline">& Designer</span>
+              <span aria-label="and Designer" className="typewriter inline-block align-baseline text-glow-pink">
+                & Developer
+              </span>
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl text-pretty animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl text-pretty"
+          >
             I craft beautiful digital experiences with a focus on clean design, smooth interactions, and modern web
             technologies.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
-            <Button size="lg" className="bg-white text-black hover:bg-white/90 hover:scale-105 transition-all group">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+            className="flex flex-wrap gap-4"
+          >
+            <Button
+              onClick={scrollToProjects}
+              size="lg"
+              className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-400 hover:to-pink-400 text-white hover:scale-105 transition-all group hover:shadow-[0_0_30px_rgba(0,255,255,0.5)]"
+            >
               See My Work
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
+              onClick={scrollToContact}
               size="lg"
               variant="outline"
-              className="border-white/20 hover:bg-white/10 bg-transparent hover:scale-105 transition-all"
+              className="border-2 border-white/20 hover:border-cyan-400 hover:bg-cyan-500/10 bg-black/50 backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_rgba(0,255,255,0.3)]"
             >
               Get in Touch
             </Button>
-          </div>
+          </motion.div>
         </div>
-
-        {/* Removed dial per request */}
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{ opacity: { delay: 1.5, duration: 0.5 }, y: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2 cursor-pointer"
+        onClick={scrollToProjects}
+      >
+        <span className="text-white/60 text-sm">Scroll to explore</span>
+        <ChevronDown className="h-6 w-6 text-cyan-400" />
+      </motion.div>
     </section>
   )
 }
